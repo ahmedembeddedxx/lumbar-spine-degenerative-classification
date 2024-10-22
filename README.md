@@ -123,52 +123,50 @@ To address the challenge of data imbalance, we employed SVM-SMOTE and SMOTE tech
 
 ## Metrics
 
-| Architecture                                                                                                                                                                                                    | Ts Accuracy | F1 Score | AUC-ROC |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------- | :------- | :------ |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Pooling ResNet50 Independent DL Network BCE Loss KFolds NO SAMPLING                                                                       | 46.60%      | 37.80%   | 60.00%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Attention Layer Pooling ResNet50 Independent DL Network BCE Loss KFolds NO SAMPLING                                                       | 27.50%      | 46.40%   | 62.80%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Pooling ResNet50 Independent DL Network BCE Loss KFolds WEIGHTED LOSS FUNCTION                                                            | 40.80%      | 47.50%   | 63.30%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Attention Layer Pooling ResNet50 Independent DL Network BCE Loss KFolds WEIGHTED LOSS FUNCTION                                            | 64.20%      | 36.50%   | 58.90%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Attention Layer Pooling MedicalNet152 Independent DL Network BCE Loss KFolds NO SAMPLING                                                  | 47.50%      | 33.10%   | 55.40%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Attention Layer Pooling MedicalNet152 Independent DL Network BCE Loss KFolds WEIGHTED LOSS FUNCTION                                       | 56.00%      | 32.90%   | 56.70%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Pooling ResNet50 Independent DL Network BCE Loss KFolds NO SAMPLING                                                              | 50.20%      | 34.40%   | 57.50%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Attention Layer Pooling ResNet50 Independent DL Network BCE Loss KFolds NO SAMPLING                                              | 27.80%      | 46.30%   | 61.90%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Pooling ResNet50 Independent DL Network BCE Loss KFolds WEIGHTED LOSS FUNCTION                                                   | 27.40%      | 33.80%   | 58.00%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Attention Layer Pooling ResNet50 Independent DL Network BCE Loss KFolds WEIGHTED LOSS FUNCTION                                   | 61.00%      | 45.80%   | 61.50%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Attention Layer Pooling MedicalNet152 Independent DL Network BCE Loss KFolds NO SAMPLING                                         | 48.90%      | 31.90%   | 55.90%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Attention Layer Pooling MedicalNet152 Independent DL Network BCE Loss KFolds WEIGHTED LOSS FUNCTION                              | 46.90%      | 31.60%   | 57.50%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Pooling ResNet50 SVC Synthetic Minority Oversampling Technique (33% undersample for SVC)                                                  | 91.95%      | 61.90%   | 62.95%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Attention Layer Pooling ResNet50 SVC Synthetic Minority Oversampling Technique (33% undersample for SVC)                                  | 88.30%      | 60.70%   | 57.64%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Pooling ResNet50 LGBM Synthetic Minority Oversampling Technique (33% undersample for SVC)                                                 | 78.03%      | 45.59%   | 67.32%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Attention Layer Pooling ResNet50 LGBM Synthetic Minority Oversampling Technique (33% undersample for SVC)                                 | 81.31%      | 44.24%   | 71.42%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Pooling ResNet50 XGBoost Synthetic Minority Oversampling Technique (33% undersample for SVC)                                              | 64.48%      | 39.08%   | 62.60%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Attention Layer Pooling ResNet50 XGBoost Synthetic Minority Oversampling Technique (33% undersample for SVC)                              | 70.52%      | 42.16%   | 64.23%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Pooling ResNet50 Ensemble (XBG Bagging) Synthetic Minority Oversampling Technique (33% undersample for SVC)                               | 53.94%      | 34.53%   | 60.29%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Attention Layer Pooling ResNet50 Ensemble (XBG Bagging) Synthetic Minority Oversampling Technique (33% undersample for SVC)               | 64.96%      | 39.23%   | 63.09%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Attention Layer Pooling MedicalNet152 SVC Synthetic Minority Oversampling Technique (33% undersample for SVC)                             | 89.50%      | 54.75%   | 46.91%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Attention Layer Pooling MedicalNet152 LGBM Synthetic Minority Oversampling Technique (33% undersample for SVC)                            | 79.84%      | 43.07%   | 64.13%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Attention Layer Pooling MedicalNet152 XGBoost Synthetic Minority Oversampling Technique (33% undersample for SVC)                         | 62.51%      | 38.06%   | 61.03%  |
-| RF One Hot Encoding (1\*512 Embedding) Histogram Equalization Average Attention Layer Pooling MedicalNet152 Ensemble (XBG Bagging) Synthetic Minority Oversampling Technique (33% undersample for SVC)          | 50.53%      | 32.11%   | 58.10%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Pooling ResNet50 SVC Synthetic Minority Oversampling Technique (33% undersample for SVC)                                         | 92.21%      | 53.45%   | 61.25%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Attention Layer Pooling ResNet50 SVC Synthetic Minority Oversampling Technique (33% undersample for SVC)                         | 88.70%      | 61.92%   | 62.96%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Pooling ResNet50 LGBM Synthetic Minority Oversampling Technique (33% undersample for SVC)                                        | 77.59%      | 45.78%   | 65.84%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Attention Layer Pooling ResNet50 LGBM Synthetic Minority Oversampling Technique (33% undersample for SVC)                        | 81.41%      | 45.48%   | 69.60%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Pooling ResNet50 XGBoost Synthetic Minority Oversampling Technique (33% undersample for SVC)                                     | 63.75%      | 40.52%   | 62.54%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Attention Layer Pooling ResNet50 XGBoost Synthetic Minority Oversampling Technique (33% undersample for SVC)                     | 70.90%      | 43.70%   | 62.89%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Pooling ResNet50 Ensemble (XBG Bagging) Synthetic Minority Oversampling Technique (33% undersample for SVC)                      | 52.86%      | 34.16%   | 60.97%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Attention Layer Pooling ResNet50 Ensemble (XBG Bagging) Synthetic Minority Oversampling Technique (33% undersample for SVC)      | 65.20%      | 39.93%   | 64.30%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Attention Layer Pooling MedicalNet152 SVC Synthetic Minority Oversampling Technique (33% undersample for SVC)                    | 88.53%      | 53.17%   | 49.79%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Attention Layer Pooling MedicalNet152 LGBM Synthetic Minority Oversampling Technique (33% undersample for SVC)                   | 79.81%      | 44.40%   | 65.84%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Attention Layer Pooling MedicalNet152 XGBoost Synthetic Minority Oversampling Technique (33% undersample for SVC)                | 61.96%      | 38.01%   | 62.86%  |
-| RF One Hot Encoding (1\*512 Embedding) Grey Scaling Feature Extraction Average Attention Layer Pooling MedicalNet152 Ensemble (XBG Bagging) Synthetic Minority Oversampling Technique (33% undersample for SVC) | 49.81%      | 32.57%   | 59.15%  |
-| RF One Hot Encoding (1\*512 Embedding) - - - Random Predictions -                                                                                                                                               | ≈ 0%        | ≈ 0%     | ≈ 0%    |
-| RF One Hot Encoding (1\*2048 Embedding) Histogram Equalization Average Pooling ResNet50 SVC Synthetic Minority Oversampling Technique (33% undersample for SVC)                                                 | 88.02%      | 60.09%   | 53.37%  |
-| RF One Hot Encoding (1\*2048 Embedding) Histogram Equalization Average Attention Layer Pooling ResNet50 SVC Synthetic Minority Oversampling Technique (33% undersample for SVC)                                 | 90.94%      | 64.20%   | 63.60%  |
-| RF One Hot Encoding (1\*2048 Embedding) Histogram Equalization Average Attention Layer Pooling MedicalNet152 SVC Synthetic Minority Oversampling Technique (33% undersample for SVC)                            | 88.30%      | 59.71%   | 51.60%  |
-| RF One Hot Encoding (1\*2048 Embedding) Grey Scaling Feature Extraction Average Pooling ResNet50 SVC Synthetic Minority Oversampling Technique (33% undersample for SVC)                                        | 88.95%      | 63.10%   | 65.03%  |
-| RF One Hot Encoding (1\*2048 Embedding) Grey Scaling Feature Extraction Average Attention Layer Pooling ResNet50 SVC Synthetic Minority Oversampling Technique (33% undersample for SVC)                        | 91.04%      | 62.80%   | 62.71%  |
-| RF One Hot Encoding (1\*2048 Embedding) Grey Scaling Feature Extraction Average Attention Layer Pooling MedicalNet152 SVC Synthetic Minority Oversampling Technique (33% undersample for SVC)                   | 88.60%      | 59.95%   | 53.69%  |
-| RF One Hot Encoding (1\*2048 Embedding) - - - Random Predictions -                                                                                                                                              | ≈ 0%        | ≈ 0%     | ≈ 0%    |
+|     | Architecture                                     | Ts Accuracy | F1 Score | AUC-ROC |
+| --: | :----------------------------------------------- | :---------- | :------- | :------ |
+|   0 | HIST + ResNet50 + Independent ANN + KFolds + NS  | 46.60%      | 37.80%   | 60.00%  |
+|   1 | HIST + AAL + Independent ANN + KFolds + NS       | 27.50%      | 46.40%   | 62.80%  |
+|   2 | HIST + ResNet50 + Independent ANN + KFolds + WLS | 40.80%      | 47.50%   | 63.30%  |
+|   3 | HIST + AAL + Independent ANN + KFolds + WLS      | 64.20%      | 36.50%   | 58.90%  |
+|   4 | HIST + MN152 + Independent ANN + KFolds + NS     | 47.50%      | 33.10%   | 55.40%  |
+|   5 | HIST + MN152 + Independent ANN + KFolds + WLS    | 56.00%      | 32.90%   | 56.70%  |
+|   6 | GSL + ResNet50 + Independent ANN + KFolds + NS   | 50.20%      | 34.40%   | 57.50%  |
+|   7 | GSL + AAL + Independent ANN + KFolds + NS        | 27.80%      | 46.30%   | 61.90%  |
+|   8 | GSL + ResNet50 + Independent ANN + KFolds + WLS  | 27.40%      | 33.80%   | 58.00%  |
+|   9 | GSL + AAL + Independent ANN + KFolds + WLS       | 61.00%      | 45.80%   | 61.50%  |
+|  10 | GSL + MN152 + Independent ANN + KFolds + NS      | 48.90%      | 31.90%   | 55.90%  |
+|  11 | GSL + MN152 + Independent ANN + KFolds + WLS     | 46.90%      | 31.60%   | 57.50%  |
+|  12 | HIST + ResNet50 + SVC + SMOTE                    | 91.95%      | 61.90%   | 62.95%  |
+|  13 | HIST + AAL + SVC + SMOTE                         | 88.30%      | 60.70%   | 57.64%  |
+|  14 | HIST + ResNet50 + LGBM + SMOTE                   | 78.03%      | 45.59%   | 67.32%  |
+|  15 | HIST + AAL + LGBM + SMOTE                        | 81.31%      | 44.24%   | 71.42%  |
+|  16 | HIST + ResNet50 + XGBoost + SMOTE                | 64.48%      | 39.08%   | 62.60%  |
+|  17 | HIST + AAL + XGBoost + SMOTE                     | 70.52%      | 42.16%   | 64.23%  |
+|  18 | HIST + ResNet50 + Ensemble (XBG Bagging) + SMOTE | 53.94%      | 34.53%   | 60.29%  |
+|  19 | HIST + AAL + Ensemble (XBG Bagging) + SMOTE      | 64.96%      | 39.23%   | 63.09%  |
+|  20 | HIST + MN152 + SVC + SMOTE                       | 89.50%      | 54.75%   | 46.91%  |
+|  21 | HIST + MN152 + LGBM + SMOTE                      | 79.84%      | 43.07%   | 64.13%  |
+|  22 | HIST + MN152 + XGBoost + SMOTE                   | 62.51%      | 38.06%   | 61.03%  |
+|  23 | HIST + MN152 + Ensemble (XBG Bagging) + SMOTE    | 50.53%      | 32.11%   | 58.10%  |
+|  24 | GSL + ResNet50 + SVC + SMOTE                     | 92.21%      | 53.45%   | 61.25%  |
+|  25 | GSL + AAL + SVC + SMOTE                          | 88.70%      | 61.92%   | 62.96%  |
+|  26 | GSL + ResNet50 + LGBM + SMOTE                    | 77.59%      | 45.78%   | 65.84%  |
+|  27 | GSL + AAL + LGBM + SMOTE                         | 81.41%      | 45.48%   | 69.60%  |
+|  28 | GSL + ResNet50 + XGBoost + SMOTE                 | 63.75%      | 40.52%   | 62.54%  |
+|  29 | GSL + AAL + XGBoost + SMOTE                      | 70.90%      | 43.70%   | 62.89%  |
+|  30 | GSL + ResNet50 + Ensemble (XBG Bagging) + SMOTE  | 52.86%      | 34.16%   | 60.97%  |
+|  31 | GSL + AAL + Ensemble (XBG Bagging) + SMOTE       | 65.20%      | 39.93%   | 64.30%  |
+|  32 | GSL + MN152 + SVC + SMOTE                        | 88.53%      | 53.17%   | 49.79%  |
+|  33 | GSL + MN152 + LGBM + SMOTE                       | 79.81%      | 44.40%   | 65.84%  |
+|  34 | GSL + MN152 + XGBoost + SMOTE                    | 61.96%      | 38.01%   | 62.86%  |
+|  35 | GSL + MN152 + Ensemble (XBG Bagging) + SMOTE     | 49.81%      | 32.57%   | 59.15%  |
+|  36 | HIST + ResNet50 + SVC + SMOTE + 2048 Emb         | nan         | nan      | nan     |
+|  37 | HIST + AAL + SVC + SMOTE + 2048 Emb              | 88.02%      | 60.09%   | 53.37%  |
+|  38 | HIST + MN152 + SVC + SMOTE + 2048 Emb            | 90.94%      | 64.20%   | 63.60%  |
+|  39 | GSL + ResNet50 + SVC + SMOTE + 2048 Emb          | 88.30%      | 59.71%   | 51.60%  |
+|  40 | GSL + AAL + SVC + SMOTE + 2048 Emb               | 88.95%      | 63.10%   | 65.03%  |
+|  41 | GSL + MN152 + SVC + SMOTE + 2048 Emb             | 91.04%      | 62.80%   | 62.71%  |
 
 ---
 
