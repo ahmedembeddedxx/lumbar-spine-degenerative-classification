@@ -123,50 +123,52 @@ To address the challenge of data imbalance, we employed SVM-SMOTE and SMOTE tech
 
 ## Metrics
 
-| Architecture                                     | Ts Accuracy | F1 Score | AUC-ROC |
-| :----------------------------------------------- | :---------- | :------- | :------ |
-| HIST + ResNet50 + Independent ANN + KFolds + NS  | 46.60%      | 37.80%   | 60.00%  |
-| HIST + AAL + Independent ANN + KFolds + NS       | 27.50%      | 46.40%   | 62.80%  |
-| HIST + ResNet50 + Independent ANN + KFolds + WLS | 40.80%      | 47.50%   | 63.30%  |
-| HIST + AAL + Independent ANN + KFolds + WLS      | 64.20%      | 36.50%   | 58.90%  |
-| HIST + MN152 + Independent ANN + KFolds + NS     | 47.50%      | 33.10%   | 55.40%  |
-| HIST + MN152 + Independent ANN + KFolds + WLS    | 56.00%      | 32.90%   | 56.70%  |
-| GSL + ResNet50 + Independent ANN + KFolds + NS   | 50.20%      | 34.40%   | 57.50%  |
-| GSL + AAL + Independent ANN + KFolds + NS        | 27.80%      | 46.30%   | 61.90%  |
-| GSL + ResNet50 + Independent ANN + KFolds + WLS  | 27.40%      | 33.80%   | 58.00%  |
-| GSL + AAL + Independent ANN + KFolds + WLS       | 61.00%      | 45.80%   | 61.50%  |
-| GSL + MN152 + Independent ANN + KFolds + NS      | 48.90%      | 31.90%   | 55.90%  |
-| GSL + MN152 + Independent ANN + KFolds + WLS     | 46.90%      | 31.60%   | 57.50%  |
-| HIST + ResNet50 + SVC + SMOTE                    | 91.95%      | 61.90%   | 62.95%  |
-| HIST + AAL + SVC + SMOTE                         | 88.30%      | 60.70%   | 57.64%  |
-| HIST + ResNet50 + LGBM + SMOTE                   | 78.03%      | 45.59%   | 67.32%  |
-| HIST + AAL + LGBM + SMOTE                        | 81.31%      | 44.24%   | 71.42%  |
-| HIST + ResNet50 + XGBoost + SMOTE                | 64.48%      | 39.08%   | 62.60%  |
-| HIST + AAL + XGBoost + SMOTE                     | 70.52%      | 42.16%   | 64.23%  |
-| HIST + ResNet50 + Ensemble (XBG Bagging) + SMOTE | 53.94%      | 34.53%   | 60.29%  |
-| HIST + AAL + Ensemble (XBG Bagging) + SMOTE      | 64.96%      | 39.23%   | 63.09%  |
-| HIST + MN152 + SVC + SMOTE                       | 89.50%      | 54.75%   | 46.91%  |
-| HIST + MN152 + LGBM + SMOTE                      | 79.84%      | 43.07%   | 64.13%  |
-| HIST + MN152 + XGBoost + SMOTE                   | 62.51%      | 38.06%   | 61.03%  |
-| HIST + MN152 + Ensemble (XBG Bagging) + SMOTE    | 50.53%      | 32.11%   | 58.10%  |
-| GSL + ResNet50 + SVC + SMOTE                     | 92.21%      | 53.45%   | 61.25%  |
-| GSL + AAL + SVC + SMOTE                          | 88.70%      | 61.92%   | 62.96%  |
-| GSL + ResNet50 + LGBM + SMOTE                    | 77.59%      | 45.78%   | 65.84%  |
-| GSL + AAL + LGBM + SMOTE                         | 81.41%      | 45.48%   | 69.60%  |
-| GSL + ResNet50 + XGBoost + SMOTE                 | 63.75%      | 40.52%   | 62.54%  |
-| GSL + AAL + XGBoost + SMOTE                      | 70.90%      | 43.70%   | 62.89%  |
-| GSL + ResNet50 + Ensemble (XBG Bagging) + SMOTE  | 52.86%      | 34.16%   | 60.97%  |
-| GSL + AAL + Ensemble (XBG Bagging) + SMOTE       | 65.20%      | 39.93%   | 64.30%  |
-| GSL + MN152 + SVC + SMOTE                        | 88.53%      | 53.17%   | 49.79%  |
-| GSL + MN152 + LGBM + SMOTE                       | 79.81%      | 44.40%   | 65.84%  |
-| GSL + MN152 + XGBoost + SMOTE                    | 61.96%      | 38.01%   | 62.86%  |
-| GSL + MN152 + Ensemble (XBG Bagging) + SMOTE     | 49.81%      | 32.57%   | 59.15%  |
-| HIST + ResNet50 + SVC + SMOTE + 2048 Emb         | 88.02%      | 60.09%   | 53.37%  |
-| HIST + AAL + SVC + SMOTE + 2048 Emb              | 90.94%      | 64.20%   | 63.60%  |
-| HIST + MN152 + SVC + SMOTE + 2048 Emb            | 88.30%      | 59.71%   | 51.60%  |
-| GSL + ResNet50 + SVC + SMOTE + 2048 Emb          | 88.95%      | 63.10%   | 65.03%  |
-| GSL + AAL + SVC + SMOTE + 2048 Emb               | 91.04%      | 62.80%   | 62.71%  |
-| GSL + MN152 + SVC + SMOTE + 2048 Emb             | 88.60%      | 59.95%   | 53.69%  |
+![Architecture 2](https://github.com/ahmedembeddedxx/lumbar-spine-degenerative-classification/blob/main/img/plot.png?raw=true)
+
+| Architecture                                     | Ts Accuracy | F1 Score | AUC-ROC |  score |
+| :----------------------------------------------- | :---------- | :------- | :------ | -----: |
+| HIST + AAL + SVC + SMOTE + 2048 Emb              | 90.94%      | 64.2%    | 63.6%   | 69.308 |
+| GSL + ResNet50 + SVC + SMOTE + 2048 Emb          | 88.95%      | 63.1%    | 65.03%  | 69.042 |
+| GSL + AAL + SVC + SMOTE + 2048 Emb               | 91.04%      | 62.8%    | 62.71%  | 68.412 |
+| HIST + ResNet50 + SVC + SMOTE                    | 91.95%      | 61.9%    | 62.95%  |  68.33 |
+| GSL + AAL + SVC + SMOTE                          | 88.7%       | 61.92%   | 62.96%  | 67.692 |
+| HIST + AAL + SVC + SMOTE                         | 88.3%       | 60.7%    | 57.64%  | 64.996 |
+| GSL + ResNet50 + SVC + SMOTE                     | 92.21%      | 53.45%   | 61.25%  | 64.322 |
+| GSL + MN152 + SVC + SMOTE + 2048 Emb             | 88.6%       | 59.95%   | 53.69%  | 63.176 |
+| HIST + ResNet50 + SVC + SMOTE + 2048 Emb         | 88.02%      | 60.09%   | 53.37%  | 62.988 |
+| HIST + AAL + LGBM + SMOTE                        | 81.31%      | 44.24%   | 71.42%  | 62.526 |
+| GSL + AAL + LGBM + SMOTE                         | 81.41%      | 45.48%   | 69.6%   | 62.314 |
+| HIST + MN152 + SVC + SMOTE + 2048 Emb            | 88.3%       | 59.71%   | 51.6%   | 62.184 |
+| HIST + ResNet50 + LGBM + SMOTE                   | 78.03%      | 45.59%   | 67.32%  |  60.77 |
+| GSL + ResNet50 + LGBM + SMOTE                    | 77.59%      | 45.78%   | 65.84%  | 60.166 |
+| GSL + MN152 + LGBM + SMOTE                       | 79.81%      | 44.4%    | 65.84%  | 60.058 |
+| GSL + MN152 + SVC + SMOTE                        | 88.53%      | 53.17%   | 49.79%  |  58.89 |
+| HIST + MN152 + LGBM + SMOTE                      | 79.84%      | 43.07%   | 64.13%  | 58.848 |
+| HIST + MN152 + SVC + SMOTE                       | 89.5%       | 54.75%   | 46.91%  | 58.564 |
+| GSL + AAL + XGBoost + SMOTE                      | 70.9%       | 43.7%    | 62.89%  | 56.816 |
+| HIST + AAL + XGBoost + SMOTE                     | 70.52%      | 42.16%   | 64.23%  |  56.66 |
+| GSL + AAL + Independent ANN + KFolds + WLS       | 61.0%       | 45.8%    | 61.5%   |  55.12 |
+| GSL + AAL + Ensemble (XBG Bagging) + SMOTE       | 65.2%       | 39.93%   | 64.3%   | 54.732 |
+| GSL + ResNet50 + XGBoost + SMOTE                 | 63.75%      | 40.52%   | 62.54%  | 53.974 |
+| HIST + AAL + Ensemble (XBG Bagging) + SMOTE      | 64.96%      | 39.23%   | 63.09%  |  53.92 |
+| HIST + ResNet50 + XGBoost + SMOTE                | 64.48%      | 39.08%   | 62.6%   | 53.568 |
+| GSL + MN152 + XGBoost + SMOTE                    | 61.96%      | 38.01%   | 62.86%  |  52.74 |
+| HIST + ResNet50 + Independent ANN + KFolds + WLS | 40.8%       | 47.5%    | 63.3%   |  52.48 |
+| HIST + MN152 + XGBoost + SMOTE                   | 62.51%      | 38.06%   | 61.03%  | 52.138 |
+| HIST + AAL + Independent ANN + KFolds + WLS      | 64.2%       | 36.5%    | 58.9%   |     51 |
+| HIST + AAL + Independent ANN + KFolds + NS       | 27.5%       | 46.4%    | 62.8%   |  49.18 |
+| GSL + AAL + Independent ANN + KFolds + NS        | 27.8%       | 46.3%    | 61.9%   |  48.84 |
+| HIST + ResNet50 + Ensemble (XBG Bagging) + SMOTE | 53.94%      | 34.53%   | 60.29%  | 48.716 |
+| GSL + ResNet50 + Ensemble (XBG Bagging) + SMOTE  | 52.86%      | 34.16%   | 60.97%  | 48.624 |
+| HIST + ResNet50 + Independent ANN + KFolds + NS  | 46.6%       | 37.8%    | 60.0%   |  48.44 |
+| HIST + MN152 + Independent ANN + KFolds + WLS    | 56.0%       | 32.9%    | 56.7%   |  47.04 |
+| GSL + ResNet50 + Independent ANN + KFolds + NS   | 50.2%       | 34.4%    | 57.5%   |   46.8 |
+| GSL + MN152 + Ensemble (XBG Bagging) + SMOTE     | 49.81%      | 32.57%   | 59.15%  |  46.65 |
+| HIST + MN152 + Ensemble (XBG Bagging) + SMOTE    | 50.53%      | 32.11%   | 58.1%   |  46.19 |
+| GSL + MN152 + Independent ANN + KFolds + WLS     | 46.9%       | 31.6%    | 57.5%   |  45.02 |
+| HIST + MN152 + Independent ANN + KFolds + NS     | 47.5%       | 33.1%    | 55.4%   |   44.9 |
+| GSL + MN152 + Independent ANN + KFolds + NS      | 48.9%       | 31.9%    | 55.9%   |   44.9 |
+| GSL + ResNet50 + Independent ANN + KFolds + WLS  | 27.4%       | 33.8%    | 58.0%   |   42.2 |
 
 ---
 
