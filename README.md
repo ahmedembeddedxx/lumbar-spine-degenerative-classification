@@ -87,7 +87,9 @@ def apply_histogram_equalization(image_data):
 
 ![Architecture 2](https://github.com/ahmedembeddedxx/lumbar-spine-degenerative-classification/blob/main/img/preprocessing-architecture.png?raw=true)
 
----
+### Image Marks
+
+## ![Architecture 1.1](https://github.com/ahmedembeddedxx/lumbar-spine-degenerative-classification/blob/main/img/image-marks.png?raw=true)
 
 ## Generating Embeddings from MRI Slice Data
 
