@@ -1,5 +1,7 @@
 # _A Novel Approach for Three-Way Classification of Lumbar Spine Degeneration Using Pseudo-Modality Learning to Handle Missing MRI Data_
 
+![Author Name](https://github.com/ahmedembeddedxx/lumbar-spine-degenerative-classification/blob/main/img/bird-eye.png?raw=true)
+
 ![Author Name](https://github.com/ahmedembeddedxx/lumbar-spine-degenerative-classification/blob/main/img/author-name.png?raw=true)
 
 ## Problem Statement
