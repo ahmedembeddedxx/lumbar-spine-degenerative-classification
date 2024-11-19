@@ -1,0 +1,64 @@
+﻿{
+  "name": "Custom",
+  "textClasses": {
+    "label": {
+      "fontFace": "Google Sans"
+    },
+    "title": {
+      "fontFace": "Google Sans"
+    },
+    "callout": {
+      "fontFace": "Google Sans"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "fontSize": 14,
+            "fontFace": "Google Sans",
+            "color": {
+              "solid": {
+                "color": "#333333"
+              }
+            }
+          }
+        ],
+        "labels": [
+          {
+            "fontSize": 12,
+            "fontFace": "Google Sans",
+            "color": {
+              "solid": {
+                "color": "#666666"
+              }
+            }
+          }
+        ],
+        "categoryLabels": [
+          {
+            "fontSize": 12,
+            "fontFace": "Google Sans",
+            "color": {
+              "solid": {
+                "color": "#000000"
+              }
+            }
+          }
+        ],
+        "value": [
+          {
+            "fontSize": 12,
+            "fontFace": "Google Sans",
+            "color": {
+              "solid": {
+                "color": "#000000"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
