@@ -184,7 +184,18 @@ The proposed pseudo-modality approach proved effective in addressing missing dat
 
 ### Acknowledgments
 
-We extend our sincere gratitude to our collaborators for their invaluable contributions to this research. Special thanks to them for their support, insights, and collaborative efforts throughout the development of this work. Their dedication and expertise played a key role in the success of this project.
+We extend our sincere gratitude to our collaborators for their invaluable contributions to this research. Special thanks to them for their support, insights, and collaborative efforts throughout the development of this work. Their dedication and expertise played a key role in the success of this project. 
+
+```
+@misc{rsna-2024-lumbar-spine-degenerative-classification,
+    author = {Tyler Richards and Jason Talbott and Robyn Ball and Errol Colak and Adam Flanders and Felipe Kitamura and John Mongan and Luciano Prevedello and Maryam Vazirabad.},
+    title = {RSNA 2024 Lumbar Spine Degenerative Classification},
+    year = {2024},
+    howpublished = {\url{https://kaggle.com/competitions/rsna-2024-lumbar-spine-degenerative-classification}},
+    note = {Kaggle}
+}
+```
+
 
 - **Ibtehaj Ali** from the School of Computing, FAST-NU
 - **Ahmed Abdullah** from the School of Computing, FAST-NU
